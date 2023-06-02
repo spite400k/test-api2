@@ -14,23 +14,23 @@ type Params = {
   };
 };
 
-export const getStaticProps = async ({ params }: Params) => {
-    console.log("pagetsx ")
-  console.dir(params);
-  const page = Number(params.page);
+// export const getStaticProps = async ({ params }: Params) => {
+//     console.log("pagetsx ")
+//   console.dir(params);
+//   const page = Number(params.page);
 
-  const posts = getAllPosts([
-    'title',
-    'releaseDate',
-    'slug',
-    'thumbnail',
-    'excerpt',
-  ]).slice((page - 1) * paginationOffset, page * paginationOffset);
+//   const posts = getAllPosts([
+//     'title',
+//     'releaseDate',
+//     'slug',
+//     'thumbnail',
+//     'excerpt',
+//   ]).slice((page - 1) * paginationOffset, page * paginationOffset);
 
-  return {
-    props: { posts, maxPage: getMaxPage() },
-  };
-};
+//   return {
+//     props: { posts, maxPage: getMaxPage() },
+//   };
+// };
 
 // export async function getStaticPaths() {
 //   const pages = Array.from({

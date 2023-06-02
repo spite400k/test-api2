@@ -13,20 +13,20 @@ type Params = {
   };
 };
 
-export const getStaticProps = async ({ params }: Params) => {
-  const posts = getAllPosts([
-    'title',
-    'releaseDate',
-    'slug',
-    'thumbnail',
-    'excerpt',
-    'tags',
-  ]).filter((post) => post.tags?.includes(params.tag));
+// export const getStaticProps = async ({ params }: Params) => {
+//   const posts = getAllPosts([
+//     'title',
+//     'releaseDate',
+//     'slug',
+//     'thumbnail',
+//     'excerpt',
+//     'tags',
+//   ]).filter((post) => post.tags?.includes(params.tag));
 
-  return {
-    props: { posts },
-  };
-};
+//   return {
+//     props: { posts },
+//   };
+// };
 
 // export async function getStaticPaths() {
 //   const tags = getAllPosts(['tags']).flatMap((post) => post.tags);
