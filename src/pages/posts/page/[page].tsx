@@ -1,6 +1,4 @@
 import { Page } from '@/components/pages/page';
-import { paginationOffset } from '@/config/pagination';
-import { getAllPosts, getMaxPage } from '@/lib/api';
 
 type Props = React.ComponentPropsWithoutRef<typeof Page>;
 
@@ -8,11 +6,6 @@ const View: React.VFC<Props> = (props: Props) => <Page {...props} />;
 
 export default View;
 
-type Params = {
-  params: {
-    page: string;
-  };
-};
 
 // export const getStaticProps = async ({ params }: Params) => {
 //     console.log("pagetsx ")
