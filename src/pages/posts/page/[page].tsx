@@ -32,19 +32,19 @@ export const getStaticProps = async ({ params }: Params) => {
   };
 };
 
-export async function getStaticPaths() {
-  const pages = Array.from({
-    length: getMaxPage(),
-  }).map((_, idx) => (idx + 1).toString());
+// export async function getStaticPaths() {
+//   const pages = Array.from({
+//     length: getMaxPage(),
+//   }).map((_, idx) => (idx + 1).toString());
 
-  return {
-    paths: pages.map((page) => {
-      return {
-        params: {
-          page,
-        },
-      };
-    }),
-    fallback: false,
-  };
-}
+//   return {
+//     paths: pages.map((page) => {
+//       return {
+//         params: {
+//           page,
+//         },
+//       };
+//     }),
+//     fallback: false,
+//   };
+// }

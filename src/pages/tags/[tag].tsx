@@ -28,17 +28,17 @@ export const getStaticProps = async ({ params }: Params) => {
   };
 };
 
-export async function getStaticPaths() {
-  const tags = getAllPosts(['tags']).flatMap((post) => post.tags);
+// export async function getStaticPaths() {
+//   const tags = getAllPosts(['tags']).flatMap((post) => post.tags);
 
-  return {
-    paths: tags.map((tag) => {
-      return {
-        params: {
-          tag,
-        },
-      };
-    }),
-    fallback: false,
-  };
-}
+//   return {
+//     paths: tags.map((tag) => {
+//       return {
+//         params: {
+//           tag,
+//         },
+//       };
+//     }),
+//     fallback: false,
+//   };
+// }
